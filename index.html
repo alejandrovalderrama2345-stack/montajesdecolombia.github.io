@@ -4,97 +4,146 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Montajes de Colombia - Servicios Integrales</title>
+
+    <!-- Fuentes y estilo moderno -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
         body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #0f0f0f;
-            color: #ffffff;
+            font-family: 'Montserrat', sans-serif;
+            background-color: #0b0b0b;
+            color: white;
         }
-        header {
-            background-color: #000;
-            padding: 20px;
-            text-align: center;
-            border-bottom: 2px solid #444;
+
+        /* NAVBAR */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 40px;
+            background: rgba(0, 0, 0, 0.75);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            border-bottom: 1px solid #222;
         }
-        header h1 {
-            margin: 0;
-            font-size: 2.2rem;
+
+        nav h1 {
+            font-size: 1.4rem;
+            font-weight: 700;
             letter-spacing: 1px;
         }
-        nav {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            background-color: #111;
-            padding: 15px 0;
-            border-bottom: 1px solid #333;
-        }
+
         nav a {
-            color: #fff;
+            color: white;
+            margin-left: 25px;
             text-decoration: none;
-            font-size: 1rem;
+            font-weight: 500;
             transition: 0.3s;
         }
+
         nav a:hover {
-            color: #bbbbbb;
+            color: #00c8ff;
         }
+
+        /* HERO */
         .hero {
+            height: 90vh;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('img/hero.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
             text-align: center;
-            padding: 80px 20px;
-            background: linear-gradient(to bottom, #111, #000);
+            padding: 20px;
         }
+
         .hero h2 {
-            font-size: 2.6rem;
+            font-size: 3rem;
+            font-weight: 700;
             margin-bottom: 10px;
         }
+
         .hero p {
             font-size: 1.2rem;
             max-width: 700px;
-            margin: 0 auto;
-            color: #cccccc;
+            color: #dcdcdc;
         }
+
+        /* TITULOS DE SECCION */
         .section-title {
             text-align: center;
-            font-size: 2rem;
-            margin-top: 60px;
-            margin-bottom: 30px;
+            font-size: 2.3rem;
+            font-weight: 700;
+            margin-top: 100px;
+            margin-bottom: 40px;
         }
+
+        /* SERVICIOS */
         .services {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 25px;
             padding: 0 40px 60px;
         }
+
         .service-card {
-            background-color: #111;
+            background: #111;
             padding: 20px;
-            border-radius: 10px;
-            border: 1px solid #333;
+            border-radius: 12px;
+            border: 1px solid #222;
             transition: 0.3s;
+            text-align: center;
+            font-weight: 500;
         }
+
         .service-card:hover {
-            transform: translateY(-5px);
-            border-color: #666;
+            transform: translateY(-7px);
+            border-color: #00c8ff;
+            box-shadow: 0 0 15px #00c8ff33;
         }
+
+        /* GALERÍA */
         .gallery {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 20px;
-            padding: 20px 40px 60px;
+            padding: 0 40px 60px;
         }
+
         .gallery img {
             width: 100%;
             border-radius: 10px;
-            border: 1px solid #444;
+            transition: 0.3s;
         }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px #00c8ff44;
+        }
+
+        /* FOOTER */
         footer {
-            background-color: #000;
+            background: #000;
+            padding: 35px;
             text-align: center;
-            padding: 20px;
-            border-top: 2px solid #333;
             margin-top: 40px;
+            border-top: 1px solid #222;
         }
+
         footer p {
             margin: 5px 0;
             color: #ccc;
@@ -102,42 +151,43 @@
     </style>
 </head>
 <body>
-    <header>
-        <h1>MONTAJES DE COLOMBIA - SERVICIOS INTEGRALES</h1>
-    </header>
     <nav>
-        <a href="#servicios">Servicios</a>
-        <a href="#galeria">Galería</a>
-        <a href="#contacto">Contacto</a>
+        <h1>Montajes de Colombia</h1>
+        <div>
+            <a href="#servicios">Servicios</a>
+            <a href="#galeria">Galería</a>
+            <a href="#contacto">Contacto</a>
+        </div>
     </nav>
 
     <section class="hero">
         <h2>Excelencia en Montajes Electromecánicos</h2>
-        <p>Ofrecemos soluciones confiables en instalaciones eléctricas, mecánicas, automatización, proyectos industriales y obras civiles.</p>
+        <p>Soluciones avanzadas en instalaciones eléctricas, mecánicas, automatización, mantenimiento y proyectos industriales.</p>
     </section>
 
     <h2 id="servicios" class="section-title">Nuestros Servicios</h2>
     <section class="services">
         <div class="service-card">Facilidades eléctricas, mecánicas e I&C</div>
         <div class="service-card">Instalación de tableros eléctricos BT / MT</div>
-        <div class="service-card">Cableado y conexionado de equipos eléctricos</div>
+        <div class="service-card">Cableado y conexionado eléctrico</div>
         <div class="service-card">Construcción de redes eléctricas</div>
         <div class="service-card">Construcción de subestaciones</div>
         <div class="service-card">Montaje de equipos electromecánicos</div>
         <div class="service-card">Sistemas automatizados</div>
         <div class="service-card">Montaje de instrumentación</div>
-        <div class="service-card">Construcción líneas de flujo</div>
-        <div class="service-card">Construcción de tanques de almacenamiento</div>
-        <div class="service-card">Construcción de equipos de proceso</div>
+        <div class="service-card">Líneas de flujo</div>
+        <div class="service-card">Tanques de almacenamiento</div>
+        <div class="service-card">Equipos de proceso</div>
         <div class="service-card">Estructuras metálicas</div>
         <div class="service-card">Mantenimiento industrial</div>
-        <div class="service-card">Desarrollo y ejecución de proyectos</div>
+        <div class="service-card">Ejecución de proyectos</div>
         <div class="service-card">Obras civiles</div>
     </section>
 
     <h2 id="galeria" class="section-title">Galería de Trabajos</h2>
     <section class="gallery">
-        <!-- Agrega tus imágenes aquí -->
+        <!-- Agregar imágenes aquí -->
+        <!-- Ejemplo: <img src="img/foto1.jpg" alt="Trabajo 1"> -->
     </section>
 
     <footer id="contacto">
