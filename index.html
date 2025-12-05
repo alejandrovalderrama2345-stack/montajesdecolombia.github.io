@@ -2,10 +2,10 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
     <title>Montajes de Colombia - Servicios Integrales</title>
 
-    <!-- Fuentes y estilo moderno -->
+    <!-- FUENTES -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -20,8 +20,8 @@
 
         body {
             font-family: 'Montserrat', sans-serif;
-            background-color: #ffffff; /* FONDO BLANCO */
-            color: #000; /* TEXTO NEGRO */
+            background-color: #ffffff;
+            color: #000;
         }
 
         /* NAVBAR */
@@ -32,112 +32,122 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 15px 40px;
-            background: rgba(255, 255, 255, 0.75);
+            padding: 12px 20px;
+            background: #ffffffcc;
             backdrop-filter: blur(10px);
+            border-bottom: 1px solid #ddd;
             z-index: 1000;
-            border-bottom: 1px solid #ccc;
         }
 
         nav h1 {
-            font-size: 1.4rem;
+            font-size: 1rem;
             font-weight: 700;
-            letter-spacing: 1px;
+            max-width: 180px;
             color: #000;
+            line-height: 1.1;
+        }
+
+        nav img {
+            height: 38px;
+            width: auto;
+            border-radius: 6px;
         }
 
         nav a {
             color: #000;
-            margin-left: 25px;
+            margin-left: 12px;
+            font-size: 0.9rem;
             text-decoration: none;
-            font-weight: 500;
-            transition: 0.3s;
+            font-weight: 600;
+            background: #00c8ff22;
+            padding: 6px 10px;
+            border-radius: 6px;
+            border: 1px solid #00c8ffaa;
+            transition: 0.2s;
         }
 
         nav a:hover {
-            color: #00c8ff;
+            background: #00c8ff;
+            color: white;
         }
 
         /* HERO */
         .hero {
-            height: 90vh;
-            background: linear-gradient(rgba(255,255,255,0.7), rgba(255,255,255,0.7)), url('img/hero.jpg');
+            margin-top: 70px; /* espacio debajo del navbar */
+            height: 70vh;
+            background: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8)), url('img/hero.jpg');
             background-size: cover;
             background-position: center;
+            padding: 20px;
             display: flex;
             flex-direction: column;
             justify-content: center;
-            align-items: center;
             text-align: center;
-            padding: 20px;
         }
 
         .hero h2 {
-            font-size: 3rem;
+            font-size: 2rem;
             font-weight: 700;
             margin-bottom: 10px;
         }
 
         .hero p {
-            font-size: 1.2rem;
-            max-width: 700px;
+            font-size: 1rem;
+            max-width: 90%;
+            margin: 0 auto;
             color: #444;
         }
 
-        /* TITULOS DE SECCION */
+        /* TITULOS */
         .section-title {
             text-align: center;
-            font-size: 2.3rem;
-            font-weight: 700;
-            margin-top: 100px;
-            margin-bottom: 40px;
+            font-size: 1.8rem;
+            margin-top: 60px;
+            margin-bottom: 30px;
         }
 
         /* SERVICIOS */
         .services {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
-            padding: 0 40px 60px;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 15px;
+            padding: 0 20px 40px;
         }
 
         .service-card {
             background: #f5f5f5;
-            padding: 20px;
+            padding: 18px;
             border-radius: 12px;
+            font-weight: 600;
             border: 1px solid #ddd;
-            transition: 0.3s;
             text-align: center;
-            font-weight: 500;
-            color: #000;
+            transition: 0.3s;
         }
 
         .service-card:hover {
-            transform: translateY(-7px);
+            transform: translateY(-5px);
             border-color: #00c8ff;
-            box-shadow: 0 0 15px #00c8ff33;
+            box-shadow: 0 0 10px #00c8ff33;
         }
 
         /* GALERÍA */
         .gallery {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
-            padding: 0 40px 60px;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 15px;
+            padding: 0 20px 40px;
         }
 
         .gallery img {
             width: 100%;
-            height: 280px;
+            height: 180px;
             object-fit: cover;
-            border-radius: 12px;
+            border-radius: 10px;
             transition: 0.3s;
-            cursor: pointer;
         }
 
         .gallery img:hover {
             transform: scale(1.05);
-            box-shadow: 0 0 25px #00c8ff44;
         }
 
         /* LIGHTBOX */
@@ -158,29 +168,44 @@
             max-width: 90%;
             max-height: 90%;
             border-radius: 10px;
-            box-shadow: 0 0 20px #000;
         }
 
         /* FOOTER */
         footer {
             background: #f1f1f1;
-            padding: 35px;
+            padding: 25px;
             text-align: center;
-            margin-top: 40px;
+            margin-top: 30px;
             border-top: 1px solid #ccc;
-            color: #333;
         }
 
         footer p {
             margin: 5px 0;
         }
+
+        /*  RESPONSIVE AJUSTADO */
+        @media (max-width: 480px) {
+            nav {
+                padding: 10px 12px;
+            }
+            nav img { height: 32px; }
+            nav h1 { font-size: 0.85rem; max-width: 150px; }
+            nav a { font-size: 0.8rem; padding: 5px 8px; }
+
+            .hero h2 { font-size: 1.6rem; }
+            .hero p { font-size: 0.9rem; }
+
+            .section-title { font-size: 1.5rem; }
+
+            .gallery img { height: 150px; }
+        }
     </style>
 </head>
 <body>
+
 <nav>
-    <div style="display: flex; align-items: center; gap: 10px;">
-        <img src="images/logo.jpg" alt="Logo" 
-             style="height: 45px; width: auto; border-radius: 6px;">
+    <div style="display:flex; align-items:center; gap:10px;">
+        <img src="images/logo.jpg" alt="Logo">
         <h1>Montajes de Colombia Ingeniería y construcción SAS</h1>
     </div>
 
@@ -191,67 +216,67 @@
     </div>
 </nav>
 
-    <section class="hero">
-        <h2>Excelencia en Montajes Electromecánicos</h2>
-        <p>Soluciones avanzadas en instalaciones eléctricas, mecánicas, automatización, mantenimiento y proyectos industriales.</p>
-    </section>
+<section class="hero">
+    <h2>Excelencia en Montajes Electromecánicos</h2>
+    <p>Soluciones avanzadas en instalaciones eléctricas, mecánicas, automatización, mantenimiento y proyectos industriales.</p>
+</section>
 
-    <h2 id="servicios" class="section-title">Nuestros Servicios</h2>
-    <section class="services">
-        <div class="service-card">Facilidades eléctricas, mecánicas e I&C</div>
-        <div class="service-card">Instalación de tableros eléctricos BT / MT</div>
-        <div class="service-card">Cableado y conexionado eléctrico</div>
-        <div class="service-card">Construcción de redes eléctricas</div>
-        <div class="service-card">Construcción de subestaciones</div>
-        <div class="service-card">Montaje de equipos electromecánicos</div>
-        <div class="service-card">Sistemas automatizados</div>
-        <div class="service-card">Montaje de instrumentación</div>
-        <div class="service-card">Líneas de flujo</div>
-        <div class="service-card">Tanques de almacenamiento</div>
-        <div class="service-card">Equipos de proceso</div>
-        <div class="service-card">Estructuras metálicas</div>
-        <div class="service-card">Mantenimiento industrial</div>
-        <div class="service-card">Ejecución de proyectos</div>
-        <div class="service-card">Obras civiles</div>
-    </section>
+<h2 id="servicios" class="section-title">Nuestros Servicios</h2>
+<section class="services">
+    <div class="service-card">Facilidades eléctricas, mecánicas e I&C</div>
+    <div class="service-card">Instalación de tableros eléctricos BT / MT</div>
+    <div class="service-card">Cableado y conexionado eléctrico</div>
+    <div class="service-card">Construcción de redes eléctricas</div>
+    <div class="service-card">Construcción de subestaciones</div>
+    <div class="service-card">Montaje de equipos electromecánicos</div>
+    <div class="service-card">Sistemas automatizados</div>
+    <div class="service-card">Montaje de instrumentación</div>
+    <div class="service-card">Líneas de flujo</div>
+    <div class="service-card">Tanques de almacenamiento</div>
+    <div class="service-card">Equipos de proceso</div>
+    <div class="service-card">Estructuras metálicas</div>
+    <div class="service-card">Mantenimiento industrial</div>
+    <div class="service-card">Ejecución de proyectos</div>
+    <div class="service-card">Obras civiles</div>
+</section>
 
-    <h2 id="galeria" class="section-title">Galería de Trabajos</h2>
-    <section class="gallery">
-        <img src="images/resistance_meter.jpg" class="zoom-img">
-        <img src="images/tall_lamp.jpg" class="zoom-img">
-        <img src="images/crane.jpg" class="zoom-img">
-        <img src="images/blue_pipes.jpg" class="zoom-img">
-        <img src="images/man_electrical_infrastructure.jpg" class="zoom-img">
-        <img src="images/electrical_panel_zoomed.jpg" class="zoom-img">
-        <img src="images/black_cables.jpg" class="zoom-img">
-        <img src="images/red_pipe.jpg" class="zoom-img">
-        <img src="images/yellow_pipe.jpg" class="zoom-img">
-    </section>
+<h2 id="galeria" class="section-title">Galería de Trabajos</h2>
+<section class="gallery">
+    <img src="images/resistance_meter.jpg" class="zoom-img">
+    <img src="images/tall_lamp.jpg" class="zoom-img">
+    <img src="images/crane.jpg" class="zoom-img">
+    <img src="images/blue_pipes.jpg" class="zoom-img">
+    <img src="images/man_electrical_infrastructure.jpg" class="zoom-img">
+    <img src="images/electrical_panel_zoomed.jpg" class="zoom-img">
+    <img src="images/black_cables.jpg" class="zoom-img">
+    <img src="images/red_pipe.jpg" class="zoom-img">
+    <img src="images/yellow_pipe.jpg" class="zoom-img">
+</section>
 
-    <!-- LIGHTBOX -->
-    <div id="lightbox">
-        <img src="" id="lightbox-img">
-    </div>
+<!-- LIGHTBOX -->
+<div id="lightbox">
+    <img src="" id="lightbox-img">
+</div>
 
-    <!-- SCRIPT -->
-    <script>
-        document.querySelectorAll('.zoom-img').forEach(img => {
-            img.addEventListener('click', () => {
-                document.getElementById('lightbox-img').src = img.src;
-                document.getElementById('lightbox').style.display = 'flex';
-            });
+<script>
+    document.querySelectorAll('.zoom-img').forEach(img => {
+        img.addEventListener('click', () => {
+            document.getElementById('lightbox-img').src = img.src;
+            document.getElementById('lightbox').style.display = 'flex';
         });
+    });
 
-        document.getElementById('lightbox').addEventListener('click', () => {
-            document.getElementById('lightbox').style.display = 'none';
-        });
-    </script>
+    document.getElementById('lightbox').addEventListener('click', () => {
+        document.getElementById('lightbox').style.display = 'none';
+    });
+</script>
 
-    <footer id="contacto">
-        <p>Contacto: 3144434525</p>
-        <p>Email: montajesdecolombia@gmail.com</p>
-        <p>NIT: 901801066</p>
-        <p>Villanueva, Casanare</p>
-    </footer>
+<footer id="contacto">
+    <p>Contacto: 3144434525</p>
+    <p>Email: montajesdecolombia@gmail.com</p>
+    <p>NIT: 901801066</p>
+    <p>Villanueva, Casanare</p>
+</footer>
+
 </body>
 </html>
