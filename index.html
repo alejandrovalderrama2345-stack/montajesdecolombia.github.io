@@ -20,8 +20,8 @@
 
         body {
             font-family: 'Montserrat', sans-serif;
-            background-color: #ffffff; /* FONDO BLANCO */
-            color: #000; /* TEXTO NEGRO */
+            background-color: #ffffff; 
+            color: #000;
         }
 
         /* NAVBAR */
@@ -72,22 +72,23 @@
             padding: 20px;
         }
 
+        /* TITULO PRINCIPAL MÁS PEQUEÑO EN CELULAR */
         .hero h2 {
-            font-size: 3rem;
+            font-size: 2.1rem;
             font-weight: 700;
             margin-bottom: 10px;
         }
 
         .hero p {
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             max-width: 700px;
             color: #444;
         }
 
-        /* TITULOS DE SECCION */
+        /* TITULOS DE SECCION MÁS PEQUEÑOS */
         .section-title {
             text-align: center;
-            font-size: 2.3rem;
+            font-size: 1.9rem;
             font-weight: 700;
             margin-top: 100px;
             margin-bottom: 40px;
@@ -170,13 +171,10 @@
             border-top: 1px solid #ccc;
             color: #333;
         }
-
-        footer p {
-            margin: 5px 0;
-        }
     </style>
 </head>
 <body>
+
 <nav>
     <div style="display: flex; align-items: center; gap: 10px;">
         <img src="images/logo.jpg" alt="Logo" 
@@ -191,67 +189,67 @@
     </div>
 </nav>
 
-    <section class="hero">
-        <h2>Excelencia en Montajes Electromecánicos</h2>
-        <p>Soluciones avanzadas en instalaciones eléctricas, mecánicas, automatización, mantenimiento y proyectos industriales.</p>
-    </section>
+<section class="hero">
+    <h2>Excelencia en Montajes Electromecánicos</h2>
+    <p>Soluciones avanzadas en instalaciones eléctricas, mecánicas, automatización, mantenimiento y proyectos industriales.</p>
+</section>
 
-    <h2 id="servicios" class="section-title">Nuestros Servicios</h2>
-    <section class="services">
-        <div class="service-card">Facilidades eléctricas, mecánicas e I&C</div>
-        <div class="service-card">Instalación de tableros eléctricos BT / MT</div>
-        <div class="service-card">Cableado y conexionado eléctrico</div>
-        <div class="service-card">Construcción de redes eléctricas</div>
-        <div class="service-card">Construcción de subestaciones</div>
-        <div class="service-card">Montaje de equipos electromecánicos</div>
-        <div class="service-card">Sistemas automatizados</div>
-        <div class="service-card">Montaje de instrumentación</div>
-        <div class="service-card">Líneas de flujo</div>
-        <div class="service-card">Tanques de almacenamiento</div>
-        <div class="service-card">Equipos de proceso</div>
-        <div class="service-card">Estructuras metálicas</div>
-        <div class="service-card">Mantenimiento industrial</div>
-        <div class="service-card">Ejecución de proyectos</div>
-        <div class="service-card">Obras civiles</div>
-    </section>
+<h2 id="servicios" class="section-title">Nuestros Servicios</h2>
+<section class="services">
+    <div class="service-card">Facilidades eléctricas, mecánicas e I&C</div>
+    <div class="service-card">Instalación de tableros eléctricos BT / MT</div>
+    <div class="service-card">Cableado y conexionado eléctrico</div>
+    <div class="service-card">Construcción de redes eléctricas</div>
+    <div class="service-card">Construcción de subestaciones</div>
+    <div class="service-card">Montaje de equipos electromecánicos</div>
+    <div class="service-card">Sistemas automatizados</div>
+    <div class="service-card">Montaje de instrumentación</div>
+    <div class="service-card">Líneas de flujo</div>
+    <div class="service-card">Tanques de almacenamiento</div>
+    <div class="service-card">Equipos de proceso</div>
+    <div class="service-card">Estructuras metálicas</div>
+    <div class="service-card">Mantenimiento industrial</div>
+    <div class="service-card">Ejecución de proyectos</div>
+    <div class="service-card">Obras civiles</div>
+</section>
 
-    <h2 id="galeria" class="section-title">Galería de Trabajos</h2>
-    <section class="gallery">
-        <img src="images/resistance_meter.jpg" class="zoom-img">
-        <img src="images/tall_lamp.jpg" class="zoom-img">
-        <img src="images/crane.jpg" class="zoom-img">
-        <img src="images/blue_pipes.jpg" class="zoom-img">
-        <img src="images/man_electrical_infrastructure.jpg" class="zoom-img">
-        <img src="images/electrical_panel_zoomed.jpg" class="zoom-img">
-        <img src="images/black_cables.jpg" class="zoom-img">
-        <img src="images/red_pipe.jpg" class="zoom-img">
-        <img src="images/yellow_pipe.jpg" class="zoom-img">
-    </section>
+<h2 id="galeria" class="section-title">Galería de Trabajos</h2>
+<section class="gallery">
+    <img src="images/resistance_meter.jpg" class="zoom-img">
+    <img src="images/tall_lamp.jpg" class="zoom-img">
+    <img src="images/crane.jpg" class="zoom-img">
+    <img src="images/blue_pipes.jpg" class="zoom-img">
+    <img src="images/man_electrical_infrastructure.jpg" class="zoom-img">
+    <img src="images/electrical_panel_zoomed.jpg" class="zoom-img">
+    <img src="images/black_cables.jpg" class="zoom-img">
+    <img src="images/red_pipe.jpg" class="zoom-img">
+    <img src="images/yellow_pipe.jpg" class="zoom-img">
+</section>
 
-    <!-- LIGHTBOX -->
-    <div id="lightbox">
-        <img src="" id="lightbox-img">
-    </div>
+<!-- LIGHTBOX -->
+<div id="lightbox">
+    <img src="" id="lightbox-img">
+</div>
 
-    <!-- SCRIPT -->
-    <script>
-        document.querySelectorAll('.zoom-img').forEach(img => {
-            img.addEventListener('click', () => {
-                document.getElementById('lightbox-img').src = img.src;
-                document.getElementById('lightbox').style.display = 'flex';
-            });
+<script>
+    document.querySelectorAll('.zoom-img').forEach(img => {
+        img.addEventListener('click', () => {
+            document.getElementById('lightbox-img').src = img.src;
+            document.getElementById('lightbox').style.display = 'flex';
         });
+    });
 
-        document.getElementById('lightbox').addEventListener('click', () => {
-            document.getElementById('lightbox').style.display = 'none';
-        });
-    </script>
+    document.getElementById('lightbox').addEventListener('click', () => {
+        document.getElementById('lightbox').style.display = 'none';
+    });
+</script>
 
-    <footer id="contacto">
-        <p>Contacto: 3144434525</p>
-        <p>Email: montajesdecolombia@gmail.com</p>
-        <p>NIT: 901801066</p>
-        <p>Villanueva, Casanare</p>
-    </footer>
+<footer id="contacto">
+    <p>Contacto: 3144434525</p>
+    <p>Email: montajesdecolombia@gmail.com</p>
+    <p>NIT: 901801066</p>
+    <p>Villanueva, Casanare</p>
+</footer>
+
 </body>
 </html>
